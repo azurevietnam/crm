@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_banners/models/fields">
+
+		<field name="id" type="text" default="0"
+			readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" />
+		
+		<field name="category_id" type="crmselect" value="id" text="title" table="#__crm_category"
+			class="inputbox" size="40" label="Ngành nghề" description="--Chọn Ngành nghề--"/>
+		
+		<field name="title" type="text"
+			class="inputbox"
+			size="40" label="Tiêu đề"
+			description="" required="true" />
+		
+		<field name="phone" type="text" label="Điện thoại" class="inputbox" size="40" description="" />
+		<field name="fax" type="text" label="Số fax" class="inputbox" size="40" description="" />
+		<field name="email" type="text" label="Email" class="inputbox" size="40" description="" />
+		<field name="address" type="text" label="Địa chỉ" class="inputbox" size="40" description="" />
+		
+		<field name="director_name" type="text" label="Họ và tên Giám đốc" class="inputbox" size="40" description="" />
+		<field name="director_email" type="text" label="Email Giám đốc" class="inputbox" size="40" description="" />
+		<field name="director_mobile" type="text" label="Điện thoại Giám đốc" class="inputbox" size="80" rows="5" cols="80" description="" />
+		
+		<field name="bank_info" type="textarea" label="Tài khoản Ngân hàng" class="inputbox" size="40" description="" />
+		
+		<field name="description" type="editor"
+			class="inputbox" filter="JComponentHelper::filterText" 
+			size="10" label="Mô tả"
+			description="" />
+		
+		<field name="state" type="list"
+			label="JSTATUS" description="COM_BANNERS_FIELD_STATE_DESC"
+			class="chzn-color-state"
+			size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field name="created" type="calendar" label="Ngày tạo"
+			description="" class="inputbox" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		
+		<field name="created_by" type="user"
+			label="Tạo bởi" description="" />
+			
+	</fieldset>
+</form>
