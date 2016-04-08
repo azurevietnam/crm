@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_banners/models/fields">
+
+		<field name="id" type="text" default="0"
+			readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" />
+		
+		<field name="category_id" type="crmselect" value="id" text="title" table="#__crm_category"
+			class="inputbox" size="40" label="Ngành nghề" description="--Chọn Ngành nghề--" />
+		
+		<field name="type_id" type="crmselect" value="id" text="title" table="#__crm_type"
+			class="inputbox" size="40" label="Phân loại" description="--Chọn Phân loại--" />
+		
+		<field name="company_id" type="crmselect" value="id" text="title" table="#__crm_company"
+			class="inputbox" size="40" label="Công ty" description="--Chọn Công ty--" />
+		
+		<field name="name" type="text"
+			class="inputbox"
+			size="40" label="Họ và tên"
+			description="" required="true" />
+		
+		<field name="avatar" type="media" hide_none="1"
+			class="inputbox" size="40" label="Ảnh đại diện" description="" />
+		
+		<field name="birthday" type="calendar"
+			class="inputbox" size="40" label="Ngày sinh" description="" />
+		
+		<field name="email" type="text"
+			class="inputbox" size="40" label="Email" description="" />
+		
+		<field name="mobile" type="text"
+			class="inputbox" size="40" label="Số điện thoại" description="" />
+		
+		<field name="address" type="text"
+			class="inputbox" size="40" label="Địa chỉ" description="" />
+		
+		<field name="description" type="editor"
+			class="inputbox" size="40" width="800" height="100" label="Thông tin thêm" description="" filter="JComponentHelper::filterText" />
+		
+		<field name="state" type="list"
+			label="JSTATUS" description="COM_BANNERS_FIELD_STATE_DESC"
+			class="chzn-color-state"
+			size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+	</fieldset>
+</form>

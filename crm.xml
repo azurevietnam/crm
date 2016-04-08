@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_crm</name>
+	<author>Thegioiweb.Info</author>
+	<creationDate>July 2014</creationDate>
+	<copyright>(C) 2005 - 2014 Open Source Matters. All rights reserved.	</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>chuvanvinh@gmail.com</authorEmail>
+	<authorUrl>www.thegioiweb.info</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_CONTENT_XML_DESCRIPTION</description>
+
+	<!-- <files folder="site">
+		<filename>customer.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<folder>helpers</folder>
+		<folder>models</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_content.ini</language>
+	</languages> -->
+	<administration>
+		<menu img="class:banners">com_crm</menu>
+		<submenu>
+			<!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+			<menu link="option=com_crm" view="banners" img="class:banners"
+				alt="Banners/Banners">com_crm_customers</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>crm.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="vi-VN">language/vi-VN.com_crm.ini</language>
+			<language tag="vi-VN">language/vi-VN.com_crm.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
+
+

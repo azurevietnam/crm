@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details"
+		addfieldpath="/administrator/components/com_banners/models/fields">
+
+		<field name="id" type="text" default="0"
+			readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" />
+		
+		<field name="customer_id" type="modal_customer" label="Khách hàng" required="true" class="inputbox" size="40" description="" />
+		
+		<field name="description" type="editor" label="Thông tin chi tiết" class="" size="10" description="" filter="JComponentHelper::filterText" />
+		
+		<field name="start_date" type="calendar" label="Ngày bắt đầu"
+			description="" class="inputbox" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		
+		<field name="end_date" type="calendar" label="Ngày kết thúc"
+			description="" class="inputbox" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		
+		<field name="notify" type="radio" class="btn-group btn-group-yesno"
+			label="Cảnh báo Kết thúc" description="Cảnh báo khi đơn hàng sắp kết thúc" default="0" >
+			<option value="1">Có</option>
+			<option value="0">Không</option>
+		</field>
+		
+		<field name="state" type="list"
+			label="JSTATUS" description="COM_BANNERS_FIELD_STATE_DESC"
+			class="chzn-color-state"
+			size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+		<field name="created" type="calendar" label="Ngày tạo"
+			description="" class="inputbox" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		
+		<field name="created_by" type="user"
+			label="Tạo bởi" description="" />
+		
+		<field name="services" type="crmselect" label="Dịch vụ" 
+			field_name="title" field_value="id" table="#__crm_service"
+			class="inputbox" default="" size="1" description="--Chọn dịch vụ--" />
+		
+		<field name="payments" type="crmselect" label="Dịch vụ" 
+			field_name="title" field_value="id" table="#__crm_service"
+			class="inputbox" default="" size="1" description="--Chọn dịch vụ--" />
+		
+	</fieldset>
+</form>

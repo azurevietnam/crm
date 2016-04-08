@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_BANNERS_SEARCH_IN_TITLE"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string"
+		/>
+		<field name="category_id" type="crmselect" value="id" text="title" table="#__crm_category"
+			class="inputbox" size="40" label="Ngành nghề" description="--Chọn Ngành nghề--" onchange="this.form.submit();" />
+			
+		<field name="type_id" type="crmselect" value="id" text="title" table="#__crm_type"
+			class="inputbox" size="40" label="Phân loại" description="--Chọn Phân loại--" onchange="this.form.submit();" />
+			
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			statuses="*,0,1,2,-2"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="a.name ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.id ASC">JGRID_HEADING_ID_ASC</option>
+			<option value="a.id DESC">JGRID_HEADING_ID_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="inputbox input-mini"
+			default="25"
+			label="COM_BANNERS_LIST_LIMIT"
+			description="COM_BANNERS_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>
